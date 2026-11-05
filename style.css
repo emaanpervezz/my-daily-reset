@@ -1,0 +1,393 @@
+/* 1. Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff0f5;
+    color: #4b2638;
+    padding: 25px;
+}
+
+/* 2. Header */
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #f8b8d0, #ffe0eb);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    border: 2px solid #e9a0bd;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* 3. Main Sections */
+.daily-section {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    border: 1px solid #edb5ca;
+    box-shadow: 0 4px 12px rgba(180, 90, 130, 0.10);
+}
+
+.daily-section h2 {
+    color: #a94d78;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+/* 4. Progress */
+#progress {
+    color: #c04e85;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* 5. Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}
+/* WEEKLY PROGRESS */
+
+#weekly-days {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.day-card {
+    background: #fff0f5;
+    border: 1px solid #edb5ca;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.day-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(180, 90, 130, 0.15);
+}
+
+.day-card h3 {
+    color: #a94d78;
+    margin-bottom: 10px;
+}
+
+.day-card p {
+    color: #7b5265;
+    font-size: 14px;
+}
+
+#weekly-completed,
+#weekly-percentage {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #c04e85;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+    #weekly-days {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* MONTHLY GOALS */
+
+.goal-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.goal-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #fff0f5;
+    border: 1px solid #edb5ca;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.goal-card:hover {
+    background: #ffe0eb;
+    transform: translateY(-3px);
+}
+
+.goal-card input {
+    accent-color: #c04e85;
+    width: 17px;
+    height: 17px;
+}
+
+@media (max-width: 600px) {
+    .goal-list {
+        grid-template-columns: 1fr;
+    }
+}
+/* STREAK TRACKER */
+
+#streak-tracker {
+    text-align: center;
+    background: linear-gradient(135deg, #ffe0eb, #fff0f5);
+}
+
+#streak-count {
+    font-size: 35px;
+    color: #c04e85;
+    margin-top: 15px;
+}
+
+#monthly-progress{
+color: #c04e85;
+font-weight: bold;
+font-size: 18px;
+margin: 15px 0;
+}
+
+/* MONTHLY PROGRESS BAR */
+
+.progress-container {
+    width: 100%;
+    height: 14px;
+    background: #ffe0eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0 20px;
+}
+
+#monthly-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #e98bb3, #c04e85);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.daily-progress-container {
+    width: 100%;
+    height: 14px;
+    background: #ffe0eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0 20px;
+}
+
+#daily-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #e98bb3, #c04e85);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+/* DAILY CHECKLIST DESIGN */
+
+.daily-section label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    margin: 10px 0;
+    background: #fff5f9;
+    border: 1px solid #f5d5e2;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.daily-section label:hover {
+    background: #ffe5ef;
+    transform: translateX(4px);
+}
+
+/* PINK CHECKBOXES */
+
+.daily-section input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #c04e85;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+/* COMPLETED TASK DESIGN */
+
+.daily-section label:has(input:checked) {
+    background: #ffe0eb;
+    border-color: #e9a0bd;
+    color: #a94d78;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.daily-section label:has(input:checked):hover {
+    background: #ffd3e3;
+}
+
+#current-date {
+    font-size: 16px;
+    color: #a94d78;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* DAILY REFLECTION DESIGN */
+
+#daily-reflection textarea {
+    width: 100%;
+    min-height: 90px;
+    padding: 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #edb5ca;
+    border-radius: 12px;
+    background: #fff5f9;
+    color: #4b2638;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    resize: vertical;
+    outline: none;
+    transition: 0.3s;
+}
+
+#daily-reflection textarea:focus {
+    border-color: #c04e85;
+    box-shadow: 0 0 8px rgba(192, 78, 133, 0.2);
+}
+
+#daily-reflection textarea::placeholder {
+    color: #c18ba4;
+}
+
+#daily-reflection p {
+    font-weight: bold;
+    color: #a94d78;
+    margin-top: 12px;
+}
+
+#greeting {
+    font-size: 17px;
+    color: #a94d78;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+#custom-tasks input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #edb5ca;
+    border-radius: 12px;
+    background: #fff5f9;
+    font-size: 15px;
+    margin: 12px 0;
+    outline: none;
+}
+
+#add-task-btn {
+    background: #d96b9b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#custom-task-list label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #fff0f6;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+}
+
+#custom-task-list button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+#custom-task-list label:has(input:checked) {
+    background: #ffe0eb;
+    border-color: #e9a0bd;
+    color: #a94d78;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+#reset-day-btn {
+    background: #d96b9b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+#reset-day-btn:hover {
+    background: #bd5282;
+    transform: translateY(-2px);
+}
+
+#daily-progress-bar {
+    transition: width 0.5s ease;
+}
+
+#reset-reflection-btn {
+    background: #d96b9b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+#reset-reflection-btn:hover {
+    background: #bd5282;
+    transform: translateY(-2px);
+}
+
+#back-to-top {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 22px;
+    background: #d96b9b;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+}

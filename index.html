@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Daily Reset</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>My Daily Reset ♡</h1>
+    <p id="greeting"></p>
+    <p>Pray • Learn • Grow • Move</p>
+    <h3>November Planner</h3>
+    <p id="current-date"></p>
+</header>
+
+<main>
+
+    <section>
+        <h2>📅 Today's Progress</h2>
+        <p id="progress">0% Completed</p>
+
+        <div class="progress-container">
+            <div id="daily-progress-bar"></div>
+        </div>
+
+        <button id="reset-day-btn">↻ Reset Today's Tasks</button>
+    </section>
+
+    <section class="daily-section">
+        <h2>🕌 Deen & Spirituality</h2>
+        <label><input type="checkbox"> Fajr Namaz</label>
+        <label><input type="checkbox"> Dhuhr Namaz</label>
+        <label><input type="checkbox"> Asr Namaz</label>
+        <label><input type="checkbox"> Maghrib Namaz</label>
+        <label><input type="checkbox"> Isha Namaz</label>
+        <label><input type="checkbox"> Quran Reading (15–20 min)</label>
+    </section>
+
+    <section class="daily-section">
+        <h2>💗 Health & Fitness</h2>
+        <label><input type="checkbox"> 45 Minutes Exercise</label>
+        <label><input type="checkbox"> Healthy Meals</label>
+        <label><input type="checkbox"> Stay Hydrated</label>
+        <label><input type="checkbox"> Good Sleep</label>
+    </section>
+
+    <section class="daily-section">
+        <h2>💻 Learning & Career</h2>
+        <label><input type="checkbox"> Angela Yu Python Course</label>
+        <label><input type="checkbox"> Python Practice / Projects</label>
+        <label><input type="checkbox"> University Assignments</label>
+        <label><input type="checkbox"> Plan Next Day</label>
+    </section>
+
+    <section class="daily-section">
+        <h2>🌸 Personal Development</h2>
+        <label><input type="checkbox"> Read Something Helpful</label>
+        <label><input type="checkbox"> Learn a New Skill</label>
+        <label><input type="checkbox"> Take Breaks</label>
+    </section>
+
+    <section class="daily-section" id="daily-reflection">
+
+        <section id="custom-tasks">
+            <h3>My Custom Tasks ✨</h3>
+
+            <input
+                type="text"
+                id="custom-task-input"
+                placeholder="Write your task..."
+            >
+
+            <button id="add-task-btn">Add Task +</button>
+
+            <div id="custom-task-list"></div>
+            <p id="custom-task-count">0/0 completed</p>
+        </section>
+
+        <h2>⭐ Daily Reflection</h2>
+
+        <p>What went well today?</p>
+        <textarea id="went-well" placeholder="Write here..."></textarea>
+
+        <p>What can I improve?</p>
+        <textarea id="improve" placeholder="Write here..."></textarea>
+
+        <p>I'm grateful for...</p>
+        <textarea id="grateful" placeholder="Write here..."></textarea>
+
+        <button id="reset-reflection-btn">Clear Reflection</button>
+
+    </section>
+
+    <section id="weekly-tracker">
+        <h2>📅 My Weekly Progress</h2>
+        <p>Week: Monday - Sunday</p>
+
+        <div id="weekly-days">
+
+            <div class="day-card">
+                <h3>Monday</h3>
+                <p>0% Completed</p>
+            </div>
+
+            <div class="day-card">
+                <h3>Tuesday</h3>
+                <p>0% Completed</p>
+            </div>
+
+            <div class="day-card">
+                <h3>Wednesday</h3>
+                <p>0% Completed</p>
+            </div>
+
+            <div class="day-card">
+                <h3>Thursday</h3>
+                <p>0% Completed</p>
+            </div>
+
+            <div class="day-card">
+                <h3>Friday</h3>
+                <p>0% Completed</p>
+            </div>
+
+            <div class="day-card">
+                <h3>Saturday</h3>
+                <p>0% Completed</p>
+            </div>
+
+            <div class="day-card">
+                <h3>Sunday</h3>
+                <p>0% Completed</p>
+            </div>
+
+        </div>
+
+        <h3>⭐ Weekly Summary</h3>
+        <p id="weekly-completed">0 Tasks Completed</p>
+        <p id="weekly-percentage">0% Weekly Progress</p>
+    </section>
+
+    <section id="monthly-goals">
+        <h2>🎯 November Goals</h2>
+
+        <p id="monthly-progress">0/5 Goals Completed</p>
+
+        <div class="progress-container">
+            <div id="monthly-progress-bar"></div>
+        </div>
+
+        <div class="goal-list">
+
+            <label class="goal-card">
+                <input type="checkbox" class="monthly-goal" id="goal-1">
+                Complete Python Course
+            </label>
+
+            <label class="goal-card">
+                <input type="checkbox" class="monthly-goal" id="goal-2">
+                Exercise Daily
+            </label>
+
+            <label class="goal-card">
+                <input type="checkbox" class="monthly-goal" id="goal-3">
+                Learn & Practice Python
+            </label>
+
+            <label class="goal-card">
+                <input type="checkbox" class="monthly-goal" id="goal-4">
+                Take Care of My Health
+            </label>
+
+            <label class="goal-card">
+                <input type="checkbox" class="monthly-goal" id="goal-5">
+                Maintain 5 Daily Prayers
+            </label>
+
+        </div>
+    </section>
+
+    <section id="streak-tracker">
+        <h2>🔥 Streak Tracker</h2>
+        <p>Consistency is key!</p>
+        <h3 id="streak-count">0 Days Streak</h3>
+    </section>
+
+</main>
+
+<button id="back-to-top">↑ Back to Top</button>
+<script src="../js/app.js"></script>
+
+</body>
+</html>
